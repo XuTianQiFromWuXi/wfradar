@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威孚智感防砸道闸雷达</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 1em 0;
+        }
+        .title {
+            font-size: 1.5em;
+            margin: 30px 0 0 0; /* 距离页面顶端100px */
+        }
+        .subtitle {
+            font-size: 3.75em; /* 2.5倍 */
+            margin: 0.5em 0;
+        }
+        .english {
+            font-size: 1em;
+            margin: 0;
+        }
+        .line {
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            padding: 0 0.2em;
+            margin: 0.5em 0;
+        }
+        .card {
+            position: relative;
+            width: 100%;
+            max-width: 832px; /* 原来的320px增加160% */
+            height: 259px; /* 原来的180px增加30% */
+            margin: 1em 0;
+            background: url('cardBackground.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px; /* 圆角 */
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 280px;
+            padding: 0.65em 1em; /* 高度增加30% */
+            background: white; /* 背景色白色 */
+            border: none;
+            border-radius: 10px; /* 圆角 */
+            color: orange; /* 字体颜色橙色 */
+            font-size: 1.2em; /* 字体增大20% */
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button img {
+            width: 24px; /* 调整大小 */
+            height: 24px; /* 调整大小 */
+        }
+        .footer {
+            margin-top: 2em;
+            font-size: 0.9em;
+            color: gray;
+            text-align: center;
+            margin-bottom: 30px; /* 距离页面最下端100px */
+        }
+        .footer a {
+            text-decoration: underline;
+            color: gray;
+        }
+    </style>
+    <script>
+        function playVideo(videoId) {
+            window.location.href = `play.html?video=${videoId}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="title">威孚智感</div>
+        <div class="subtitle">防砸道闸雷达</div>
+        <div class="english">Weifu Intelligent Sense</div>
+        <div class="english">Anti-smashing Barrier Radar</div>
+
+        <h2>安装指导</h2>
+        <div class="line">WRS312J</div>
+        <div class="card" onclick="playVideo('video1.mp4')">
+            <div class="button">
+                <img src="play.png" alt="Play">
+                <span>安装视频 - 50MB</span>
+            </div>
+        </div>
+
+        <h2>调试指导</h2>
+        <div class="line">WRS312J</div>
+        <div class="card" onclick="playVideo('video2.mp4')">
+            <div class="button">
+                <img src="play.png" alt="Play">
+                <span>调试视频 - 30MB</span>
+            </div>
+        </div>
+
+        <h2>PDF 资源</h2>
+        <div class="card">
+            <a href="document.pdf" download="WRS312J_Manual.pdf" class="button">
+                <span>WRS312J使用手册</span>
+                <img src="download.png" alt="Download">
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        技术支持：<a href="https://www.weifu.com.cn/index.html" target="_blank">威孚智感科技有限公司</a>
+    </div>
+</body>
+</html>

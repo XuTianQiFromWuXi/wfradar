@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频播放</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+        }
+        video {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <video id="videoPlayer" controls>
+        您的浏览器不支持视频标签。
+    </video>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const videoSrc = urlParams.get('video');
+            if (videoSrc) {
+                document.getElementById('videoPlayer').src = videoSrc;
+            }
+        }
+    </script>
+</body>
+</html>
