@@ -17,10 +17,14 @@
         }
         .container {
             max-width: 90%;
-            width: 44%; /* 使容器宽度适应body */
             margin: 0 auto;
             padding: 1em 0;
         }
+        @media (min-width: 1024px) {
+		.container {
+			width: 44%; /* PC端宽度增加40% */
+			}
+		}
         .title {
             font-size: 1.5em;
             margin: 100px 0 0 0; /* 距离页面顶端100px */
