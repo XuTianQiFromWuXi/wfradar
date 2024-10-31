@@ -21,10 +21,10 @@
             padding: 1em 0;
         }
         @media (min-width: 1024px) {
-		.container {
-			width: 44%; /* PC端宽度增加40% */
-			}
-		}
+            .container {
+                width: 44%; /* PC端宽度增加40% */
+            }
+        }
         .title {
             font-size: 1.5em;
             margin: 100px 0 0 0; /* 距离页面顶端100px */
@@ -89,6 +89,11 @@
         }
     </style>
     <script>
+        function getResource(url) {
+            const timestamp = new Date().getTime();
+            return `${url}?_=${timestamp}`;
+        }
+
         function playVideo(videoId) {
             window.location.href = `play.html?video=${videoId}`;
         }
@@ -99,7 +104,7 @@
 
         function downloadPDF() {
             if (isBrowserEnvironment()) {
-                window.location.href = 'document.pdf';
+                window.location.href = getResource('document.pdf');
             } else {
                 alert('请在浏览器中打开此页面以下载PDF文件。');
             }
@@ -115,7 +120,7 @@
 
         <h2>安装指导</h2>
         <div class="line">WRS312J</div>
-        <div class="card" onclick="playVideo('video1.mp4')">
+        <div class="card" onclick="playVideo(getResource('video1.mp4'))">
             <div class="button">
                 <img src="play.png" alt="Play">
                 <span>安装视频 - 50MB</span>
@@ -124,7 +129,7 @@
 
         <h2>调试指导</h2>
         <div class="line">WRS312J</div>
-        <div class="card" onclick="playVideo('video2.mp4')">
+        <div class="card" onclick="playVideo(getResource('video2.mp4'))">
             <div class="button">
                 <img src="play.png" alt="Play">
                 <span>调试视频 - 30MB</span>
